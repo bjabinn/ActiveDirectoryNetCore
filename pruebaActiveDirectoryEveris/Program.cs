@@ -6,15 +6,38 @@ using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Diagnostics;
+using System.DirectoryServices.ActiveDirectory;
+using System.Runtime.InteropServices;
+
 namespace pruebaActiveDirectory2
 {
     class Program
     {
+        
+        public bool checkUser(String loginDn,String password){
+            bool res=false;
+            DirectoryEntry entry = new DirectoryEntry();
+            entry.Username=loginDn;
+            entry.Password=password;
+            DirectorySearcher searcher = new DirectorySearcher(entry);
+            searcher.Filter = "(&(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))";
+            try{
+                searcher.FindOne();
+                res=true;
+            }catch (COMException) {
+                /* 
+                // Autentication Error.
+                if (ex.ErrorCode == -2147023570) {
+                    res=false;
+                } */
+            }
+            return res;
+        }
         public void getDirectorySearcher(String stringSearch, int pageSize=5){
             DirectorySearcher searcher = new DirectorySearcher();
             searcher.SizeLimit=pageSize;
             searcher.ClientTimeout=TimeSpan.FromSeconds(-1);
-            searcher.Filter = string.Format("(&(objectCategory=person)(objectClass=user)(|(DisplayName=*{0}*)(SamAccountName=*{0}*)))",stringSearch);
+            searcher.Filter = string.Format("(&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(|(DisplayName=*{0}*)(SamAccountName=*{0}*)))",stringSearch,true);
             searcher.PropertiesToLoad.Add("SamAccountName");
             searcher.PropertiesToLoad.Add("thumbnailPhoto");
             using (SearchResultCollection results = searcher.FindAll()) {
@@ -38,8 +61,8 @@ namespace pruebaActiveDirectory2
             using (var ctx= new PrincipalContext(ContextType.Domain)){
                 var myDomainUsers = new List<string>();
                 List <UserPrincipal> searchPrinciples = new List<UserPrincipal>();
-                searchPrinciples.Add(new UserPrincipal(ctx){DisplayName= String.Format("*{0}*",stringSearch)});
-                searchPrinciples.Add(new UserPrincipal(ctx){SamAccountName=String.Format("*{0}*",stringSearch)});
+                searchPrinciples.Add(new UserPrincipal(ctx){DisplayName= String.Format("*{0}*",stringSearch), Enabled=true});
+                searchPrinciples.Add(new UserPrincipal(ctx){SamAccountName=String.Format("*{0}*",stringSearch), Enabled=true});
                 foreach (UserPrincipal item in searchPrinciples) {
                     PrincipalSearcher search = new PrincipalSearcher(item);
                     foreach(var domainUsers in search.FindAll()){ 
@@ -61,6 +84,8 @@ namespace pruebaActiveDirectory2
         static void Main(string[] args)
         {
             Program p = new Program();
+           //p.checkUser("Usersad\\jmunozga","Temporal14");
+            
             long sumtimerDirectorySearch=0;
             long sumtimerUserPrincipal=0;
             for(int i=0;i<10;i++) {
