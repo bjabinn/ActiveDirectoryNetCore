@@ -4761,11 +4761,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\pruebaActiveDirectoryNovell\\pruebaActiveDirectoryNovell.csproj",
+      "projectUniqueName": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryNovell\\pruebaActiveDirectoryNovell.csproj",
       "projectName": "pruebaActiveDirectoryNovell",
-      "projectPath": "C:\\pruebaActiveDirectoryNovell\\pruebaActiveDirectoryNovell.csproj",
+      "projectPath": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryNovell\\pruebaActiveDirectoryNovell.csproj",
       "packagesPath": "C:\\Users\\jmunozga\\.nuget\\packages\\",
-      "outputPath": "C:\\pruebaActiveDirectoryNovell\\obj\\",
+      "outputPath": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryNovell\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

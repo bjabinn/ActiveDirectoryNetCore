@@ -1211,11 +1211,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\pruebaActiveDirectoryEveris\\pruebaActiveEveris.csproj",
+      "projectUniqueName": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryEveris\\pruebaActiveEveris.csproj",
       "projectName": "pruebaActiveEveris",
-      "projectPath": "C:\\pruebaActiveDirectoryEveris\\pruebaActiveEveris.csproj",
+      "projectPath": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryEveris\\pruebaActiveEveris.csproj",
       "packagesPath": "C:\\Users\\jmunozga\\.nuget\\packages\\",
-      "outputPath": "C:\\pruebaActiveDirectoryEveris\\obj\\",
+      "outputPath": "C:\\ActiveDirectoryNetCore\\pruebaActiveDirectoryEveris\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -9,3 +9,14 @@ C:\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNove
 C:\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.AssemblyInfo.cs
 C:\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.dll
 C:\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.pdb
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.csprojAssemblyReference.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.csproj.CoreCompileInputs.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.AssemblyInfoInputs.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.AssemblyInfo.cs
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.dll
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\obj\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.pdb
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\bin\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.deps.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\bin\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.runtimeconfig.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\bin\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.runtimeconfig.dev.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\bin\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.dll
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryNovell\bin\Debug\netcoreapp2.1\pruebaActiveDirectoryNovell.pdb

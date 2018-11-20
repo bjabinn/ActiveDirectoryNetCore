@@ -9,3 +9,14 @@ C:\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.Assemb
 C:\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.AssemblyInfo.cs
 C:\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.dll
 C:\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.pdb
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.csprojAssemblyReference.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.csproj.CoreCompileInputs.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.AssemblyInfoInputs.cache
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.AssemblyInfo.cs
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.dll
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\obj\Debug\netcoreapp2.1\pruebaActiveEveris.pdb
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\bin\Debug\netcoreapp2.1\pruebaActiveEveris.deps.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\bin\Debug\netcoreapp2.1\pruebaActiveEveris.runtimeconfig.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\bin\Debug\netcoreapp2.1\pruebaActiveEveris.runtimeconfig.dev.json
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\bin\Debug\netcoreapp2.1\pruebaActiveEveris.dll
+C:\ActiveDirectoryNetCore\pruebaActiveDirectoryEveris\bin\Debug\netcoreapp2.1\pruebaActiveEveris.pdb

@@ -138,16 +138,36 @@ namespace pruebaActiveDirectory2
                 }   
             }
         }
+
+        // Un método para devolver toda la información de un usuario concreto.
+
+        public void getInfoUser(String nombreCorto) {
+            DirectorySearcher searcher = new DirectorySearcher();
+            searcher.Filter=string.Format("(&(objectCategory=person)(objectClass=user)(SamAccountName={0}))",nombreCorto);
+            SearchResult domainUser = searcher.FindOne();
+            DirectoryEntry user = domainUser.GetDirectoryEntry();
+            PropertyCollection props = user.Properties;
+            foreach (string propName in props.PropertyNames)
+            {
+                if (user.Properties[propName].Value != null) {
+                    Console.WriteLine(propName + " = " + user.Properties[propName].Value.ToString());
+                } else {
+                    Console.WriteLine(propName + " = NULL");
+                }
+            }
+        }
         static void Main(string[] args)
         {
             // Un simple main para mostrar las llamadas 
             // a los metodos anteriores.
             // se prueba el tiempo de las versiones de búsqueda de 
             // empleados.
-            
+
             Program p = new Program();
+            //p.getInfoUser("jmunozga");
+            p.getInfoUser("jvillarv");
            //p.checkUser("Usersad\\jmunozga","Temporal14");
-            
+            /*
             long sumtimerDirectorySearch=0;
             long sumtimerUserPrincipal=0;
             for(int i=0;i<10;i++) {
@@ -162,6 +182,7 @@ namespace pruebaActiveDirectory2
             }
             Console.WriteLine("DirectorySearch {0} ms", sumtimerDirectorySearch/10);
             Console.WriteLine("UsersPrincipal {0} ms", sumtimerUserPrincipal/10);
+            */
         }
     }
 }

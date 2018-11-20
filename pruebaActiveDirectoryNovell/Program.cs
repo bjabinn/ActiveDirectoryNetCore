@@ -1,7 +1,7 @@
 ﻿using System;
 using Novell.Directory.Ldap;
 
-namespace pruebaActiveDirectory
+namespace pruebaActiveDirectoryNovell
 {
     static class Constants {
         public const String ldapHost="10.125.8.21";
@@ -25,6 +25,21 @@ namespace pruebaActiveDirectory
                 lc.Connect(Constants.ldapHost,LdapPort);
                 // Accedemos con las credenciales del usuario para ver si está.
                 lc.Bind(LdapVersion,loginDN,password);
+                // Set values to search
+                string base1="OU=Spain,OU=Europe,OU=Everis,DC=usersad,DC=everis,DC=int";
+                string[] attributes = new string[] {"displayName","samaccountname"};
+                string filter=String.Format("(&(objectClass=user)(samaccountname={0}))",loginDN.Substring(8));
+                LdapSearchQueue lsc=lc.Search(base1,LdapConnection.SCOPE_SUB,filter,attributes,false,(LdapSearchQueue)null,(LdapSearchConstraints)null);
+                LdapMessage msg;
+                if((msg=lsc.getResponse())!= null) {
+                    if(msg is LdapSearchResult) {
+                         LdapEntry nextEntry = ((LdapSearchResult)msg).Entry;
+                         LdapAttributeSet attributeSet = nextEntry.getAttributeSet();
+                         Console.WriteLine("Nombre corto: "+attributeSet.getAttribute("samaccountname").StringValue);
+                         Console.WriteLine("Nombre Largo: "+attributeSet.getAttribute("displayName").StringValue);
+                    }
+                }
+                 
                 lc.Disconnect();
            } catch (LdapException e) {
                    resultado=e.ResultCode;
